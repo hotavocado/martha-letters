@@ -1,0 +1,29 @@
+title: Martha
+description: Session newsletters.
+url: "https://hotavocado.github.io"
+baseurl: "/martha-letters"
+
+# Collections
+collections:
+  quotes:
+    output: true
+    permalink: /newsletters/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: quotes
+    values:
+      layout: newsletter
+
+# Exclude repo files from build
+exclude:
+  - scripts/
+  - crontab.example
+  - requirements.txt
+  - martha_skill_template.md
+  - CONTEXT.md
+  - PLAN.md
+  - README.md
+  - "*.py"
+  - "*.sh"
