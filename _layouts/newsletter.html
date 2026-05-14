@@ -10,6 +10,7 @@ layout: default
   <div class="newsletter-body">
     {{ content }}
   </div>
+  {% if page.agent %}<p class="newsletter-author">— {{ page.agent | capitalize }}</p>{% endif %}
   <nav class="newsletter-nav">
     {% if page.previous %}
       <a href="{{ page.previous.url | relative_url }}" class="nav-prev">← {{ page.previous.date | date: "%B %-d" }}</a>
